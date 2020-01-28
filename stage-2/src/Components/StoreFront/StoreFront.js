@@ -3,6 +3,7 @@ import './StoreFront.css';
 
 class StoreFront extends Component {
   render() {
+    console.log("Look here", this.props)
     let productDisplay = this.props.products.map((element, index) => {
       return (
         <div className="product-container" key={index}>
@@ -14,8 +15,10 @@ class StoreFront extends Component {
         </div>
       )
     })
+    console.log(productDisplay)
     return (
       <div className="storefront-container">
+       <div>{productDisplay}</div>
       </div>
     )
   }
